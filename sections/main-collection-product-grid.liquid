@@ -1,4 +1,5 @@
 <section class="ht-product-inner container">
+  {% paginate collection.products by {{section.settings.products_per_page}} %}
   <div class="products-wrapper">
    {% for product in collection.products %}
     <div class="product-grid">
@@ -17,8 +18,62 @@
           {% endif %}
           <span>{{product.price |  money}}</span>
        </div>
+       <button class="add-to-cart-btn" data-product-variant="{{product.first_available_variant.id}}">Add to cart</button>
     </div>
    {% endfor %}
   </div>
+  {% if paginate.pages > 1 %}
+    {% render 'pagination', paginate: paginate %}
+  {% endif %}
+  {% endpaginate %}
 </section>
 
+{% schema %}
+{
+  "name": "Product Grid",
+  "settings": [
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 8,
+      "max": 48,
+      "step": 4,
+      "default": 8,
+      "label": "Products per page"
+    }
+    ]
+}
+{% endschema %}
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function(){
+    $('.add-to-cart-btn').click(function(e){
+    e.preventDefault();
+    let button = $(this);
+    button.text('Adding....')
+    let variantID = $(this).data('product-variant');
+    let quantity = 1;
+    $.ajax({
+      type:'POST',
+      url: '/cart/add.js',
+      data:{
+        quantity: quantity,
+        id: variantID
+      },
+      dataType: 'json',
+      success: function(response){
+        console.log(response)
+        fetch(window.Shopify.routes.root + 'cart.js')
+        .then(response => response.json())
+        .then(data => {
+          $('.cart-count-bubble span').text(data.item_count)
+          console.log(data)
+        })
+
+        button.text('Add to Cart');
+      }
+    })
+
+    })
+  })
+</script>
