@@ -4,7 +4,6 @@
   --alpha-link: 0.85;
   --alpha-badge-border: 0.1;
 }
-
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);
@@ -3558,6 +3557,12 @@ section.ht-product-inner.container {
 .ht-product-inner .product-title a:hover{
   color: #e32a53;
 }
+.product-title .compare-price {
+  text-decoration: line-through;
+  color: green;
+  font-size: 13px;
+}
+
 .ht-product-inner .product-title span{
   font-size: 24px;
   font-weight: bold;
@@ -3685,4 +3690,5 @@ section.ht-product-inner.container {
     font-size: 17px;
     cursor: pointer;
 }
+
 .collection-banner #shopify-section-template--14983386759219__banner{display: none;}
