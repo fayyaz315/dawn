@@ -3564,12 +3564,6 @@ section.main-product-section.container {
   font-weight: bold;
   color: #e32a53;
 }
-.main-product-section  .product-title .compare-price {
-  text-decoration: line-through;
-  color: #000000ad;
-  font-size: 15px;
-}
-
 .main-product-section .product-rating .fa-star{
   font-size: 20px;
   color: #e7a415;
