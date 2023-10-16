@@ -1,0 +1,77 @@
+<div class="collection-banner container {{section.settings.banner_text_position}}">
+  <div class="collection-banner-image" style="background-image:url('{{collection.image | img_url: '2000x'}}');" >
+    <div class="collection-title">
+    <h2>{{collection.title}}</h2>
+    <p>{{collection.description}}</p>
+  </div>
+  </div>
+</div>
+<style>
+  .collection-title h2{
+    font-size: {{ section.settings.font_size}}px;
+    color: {{ section.settings.title_color}};
+  }
+  .collection-title p{
+    font-size: {{ section.settings.description_font_size}}px;
+    color: {{ section.settings. description_color}};
+  }
+</style>
+{% schema %}
+{
+  "name": "Collection Banner",
+  "settings": [
+          {
+            "type": "range",
+            "id": "font_size",
+            "min": 12,
+            "max": 40,
+            "step": 1,
+            "unit": "px",
+            "label": "Font size",
+            "default": 16
+          },
+          {
+            "type": "color",
+            "id": "title_color",
+            "label": "Title Color",
+            "default": "#000000"
+          },  
+          {
+            "type": "range",
+            "id": "description_font_size",
+            "min": 12,
+            "max": 24,
+            "step": 1,
+            "unit": "px",
+            "label": "Font size",
+            "default": 16
+          },
+          {
+            "type": "color",
+            "id": "description_color",
+            "label": "Description Color",
+            "default": "#000000"
+          },
+        {
+        "type": "select",
+        "id": "banner_text_position",
+        "label": "Banner Text Position",
+        "options": [
+          {
+            "value": "text-left",
+            "label": "Left"
+          },
+          {
+            "value": "text-center",
+            "label": "Center"
+          },
+          {
+            "value": "text-right",
+            "label": "Right"
+          }
+        ],
+        "default": "text-left"
+      }
+    ]
+}
+{% endschema %}

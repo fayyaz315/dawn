@@ -1,0 +1,22 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "font_size": 40,
+        "title_color": "#ffffff",
+        "description_font_size": 20,
+        "description_color": "#ffffff",
+        "banner_text_position": "text-left"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {}
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid"
+  ]
+}
