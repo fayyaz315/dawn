@@ -1,5 +1,4 @@
 <section class="ht-product-inner container">
-  {% paginate collection.products by {{section.settings.products_per_page}} %}
   <div class="products-wrapper">
    {% for product in collection.products %}
     <div class="product-grid">
@@ -22,27 +21,8 @@
     </div>
    {% endfor %}
   </div>
-  {% if paginate.pages > 1 %}
-    {% render 'pagination', paginate: paginate %}
-  {% endif %}
-  {% endpaginate %}
 </section>
-
 {% schema %}
-{
-  "name": "Product Grid",
-  "settings": [
-    {
-      "type": "range",
-      "id": "products_per_page",
-      "min": 8,
-      "max": 48,
-      "step": 4,
-      "default": 8,
-      "label": "Products per page"
-    }
-    ]
-}
 {% endschema %}
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script>
