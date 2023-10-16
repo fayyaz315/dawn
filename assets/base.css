@@ -3558,6 +3558,11 @@ section.ht-product-inner.container {
 .ht-product-inner .product-title a:hover{
   color: #e32a53;
 }
+.product-title .compare-price {
+  text-decoration: line-through;
+  color: green;
+  font-size: 13px;
+}
 .ht-product-inner .product-title span{
   font-size: 24px;
   font-weight: bold;
