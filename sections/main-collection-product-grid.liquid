@@ -1,15 +1,9 @@
-<section class="ht-product-inner container">
+<section class="main-product-section container">
   {% paginate collection.products by {{section.settings.products_per_page}} %}
-  <div class="products-wrapper">
+  <div class="products-wrapper" data-next-url="{{paginate.next.url}}">
    {% for product in collection.products %}
     <div class="product-grid">
       <a href="{{product.url}}"><div class="product-image" style="background-image: url('{{product.featured_image | img_url: '1000x'}}');">
-      {% if product.tags contains 'sale' or product.price < product.compare_at_price %}
-        <span class="product-sale">Sale</span>
-      {% endif %}
-        {% if product.tags contains 'new' %}
-          <span class="product-tag">New</span>
-        {% endif %}
       </div></a>
       <div class="product-title popup-cart-title">
           <h4><a href="product.url">{{product.title}}</a></h4>
@@ -18,16 +12,15 @@
           {% endif %}
           <span>{{product.price |  money}}</span>
        </div>
-       <button class="add-to-cart-btn" data-product-variant="{{product.first_available_variant.id}}">Add to cart</button>
     </div>
    {% endfor %}
   </div>
-  {% if paginate.pages > 1 %}
-    {% render 'pagination', paginate: paginate %}
+    {% if paginate.pages > 1 %}
+    <button class="load-more-btn">Load more</button>
+    <div class="load-more-spinner"></div>
   {% endif %}
   {% endpaginate %}
 </section>
-
 {% schema %}
 {
   "name": "Product Grid",
@@ -44,33 +37,31 @@
     ]
 }
 {% endschema %}
+
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script>
   $(document).ready(function(){
-    $('.add-to-cart-btn').click(function(e){
+    let productsOnPage = $('.products-wrapper')
+    let nextUrl = productsOnPage.attr('data-next-url')
+    let loadMoreBtn = $('.load-more-btn');
+    let loadMoreSpinner = $('.load-more-spinner');
+    $('.load-more-btn').click(function(e){
     e.preventDefault();
-    let button = $(this);
-    button.text('Adding....')
-    let variantID = $(this).data('product-variant');
-    let quantity = 1;
+    loadMoreBtn.hide()
+    loadMoreSpinner.show()
     $.ajax({
-      type:'POST',
-      url: '/cart/add.js',
-      data:{
-        quantity: quantity,
-        id: variantID
-      },
-      dataType: 'json',
-      success: function(response){
-        console.log(response)
-        fetch(window.Shopify.routes.root + 'cart.js')
-        .then(response => response.json())
-        .then(data => {
-          $('.cart-count-bubble span').text(data.item_count)
-          console.log(data)
-        })
-
-        button.text('Add to Cart');
+      url: nextUrl,
+      type: "GET",
+      dataType: "html",
+      success: function(nextPage){
+        loadMoreSpinner.hide();
+        let newProducts = $(nextPage).find('.products-wrapper')
+        productsOnPage.append(newProducts.html());
+        let newUrl = newProducts.attr('data-next-url');
+        nextUrl = newUrl
+        if(newUrl){
+          loadMoreBtn.show();
+        }
       }
     })
 

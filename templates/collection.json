@@ -12,7 +12,9 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "settings": {}
+      "settings": {
+        "products_per_page": 8
+      }
     }
   },
   "order": [
