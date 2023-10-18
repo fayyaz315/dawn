@@ -3,14 +3,28 @@
   <div class="products-wrapper" data-next-url="{{paginate.next.url}}">
    {% for product in collection.products %}
     <div class="product-grid">
-      <a href="{{product.url}}"><div class="product-image" style="background-image: url('{{product.featured_image | img_url: '1000x'}}');">
+      <a href="{{product.url}}"><div class="product-image" style="background-image: url('{{product.featured_image | img_url: '2000x'}}');">
       </div></a>
       <div class="product-title popup-cart-title">
           <h4><a href="product.url">{{product.title}}</a></h4>
+          <span>{{product.price |  money}}</span>
           {% if product.compare_at_price %}
             <span class="compare-price">{{product.compare_at_price | money}}</span>
           {% endif %}
-          <span>{{product.price |  money}}</span>
+          {% for option in product.options_with_values %}
+            {% if option.name contains 'Color' %}
+              <div class="custom-swatches-list">
+                {% for value in option.values %}
+                  {% for variant in product.variants %}
+                    {% if variant.title contains value %}
+                      {% assign variant_image_source = variant.image | img_url: '1000x' %}
+                    {% endif %}
+                  {% endfor %}
+                  <span class="color-{{value |  handleize}}" data-image-source="{{variant_image_source}}"></span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          {% endfor %}
        </div>
     </div>
    {% endfor %}
@@ -28,10 +42,10 @@
     {
       "type": "range",
       "id": "products_per_page",
-      "min": 8,
-      "max": 48,
-      "step": 4,
-      "default": 8,
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "default": 10,
       "label": "Products per page"
     }
     ]
@@ -66,5 +80,10 @@
     })
 
     })
+   $(document).on('mouseover', '.custom-swatches-list span', function(){
+    let imageSrouce = $(this).attr('data-image-source')
+    let productImage = $(this).closest('.product-grid').find('.product-image')
+    productImage.css('background-image', `url(${imageSrouce})`)
+   })
   })
 </script>

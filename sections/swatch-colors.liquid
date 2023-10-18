@@ -1,0 +1,34 @@
+<style>
+    {% for block in section.blocks %}
+        .color-{{block.settings.title | handleize}}{
+            background-color: {{block.settings.color}}
+        }
+    {% endfor %}
+</style>
+
+
+{% schema %}
+{
+    "name": "Product swatches",
+    "settings": [
+        ],
+        "blocks": [
+            {
+                "type": "color_swatches",
+                "name": "Color Swathes",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Color name"
+                    },
+                    {
+                        "type": "color",
+                        "id": "color",
+                        "label": "Swatch hex color"
+                    }
+                ]
+            }
+        ]
+}
+{% endschema %}
