@@ -39,6 +39,8 @@
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     {{ content_for_header }}
 
     {%- liquid
@@ -270,6 +272,9 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+
+
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">

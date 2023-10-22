@@ -1,12 +1,28 @@
-<style>
-    {% for block in section.blocks %}
-        .color-{{block.settings.title | handleize}}{
-            background-color: {{block.settings.color}}
-        }
-    {% endfor %}
+<style type="text/css">
+  {% for block in section.blocks %}
+    {% if block.settings.image != blank %}
+      {% capture background %}url({{ block.settings.image | img_url: '100x' }}) no-repeat center{% endcapture %}
+    {% else %}
+    {%- assign color_number = 1 -%}
+      {% for i in (2..3) %}
+        {% capture current_color %}color{{ i }}{% endcapture %}
+        {% if block.settings[current_color] != blank %}
+          {%- assign color_number = color_number | plus: 1 -%}
+        {% endif %}
+      {% endfor %}
+      {%- assign background = block.settings.color -%}
+      {% case color_number %}
+      {% when 2 %}
+          {% capture background %}linear-gradient(to right bottom, {{ block.settings.color }} 0%, {{ block.settings.color }} 50%, {{ block.settings.color2 }} 50%, {{ block.settings.color2 }} 100%){% endcapture %}
+       {% when 3 %}
+          {% capture background %}linear-gradient(to right bottom, {{ block.settings.color }} 0%, {{ block.settings.color }} 33.33%, {{ block.settings.color2 }} 33.33%, {{ block.settings.color2 }} 66.66%, {{ block.settings.color3 }} 66.66%, {{ block.settings.color3 }} 100%){% endcapture %}
+      {% endcase %}
+    {% endif %}
+    .color-{{ block.settings.title | handleize }}{
+      background: {{ background }};
+    }
+  {% endfor %}
 </style>
-
-
 {% schema %}
 {
     "name": "Product swatches",
@@ -26,6 +42,22 @@
                         "type": "color",
                         "id": "color",
                         "label": "Swatch hex color"
+                    },
+                    {
+                        "type": "color",
+                        "id": "color2",
+                        "label": "Swatch hex color #2"
+                    },
+                    {
+                        "type": "color",
+                        "id": "color3",
+                        "label": "Swatch hex color #3"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Swatch pattern",
+                        "info": "Will override any color settings above to show this image"
                     }
                 ]
             }

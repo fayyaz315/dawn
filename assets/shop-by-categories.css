@@ -1,0 +1,87 @@
+section.shop-by-categories.container {
+    max-width: 1610px;
+    margin: auto;
+}
+.shop-by-categories{
+    margin-bottom: 100px;
+}
+.shop-by-categories h2{
+    font-size: 33px;
+    color: black;
+    font-weight: 600;
+    font-family: system-ui;
+    margin-bottom: 100px;
+}
+.shop-by-categories .shop-product-image{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 67% 0;
+    display: block;
+    transition: transform var(--m-duration-image) cubic-bezier(.15,.75,.5,1) 0s;
+    transform: scale(1.13) translateZ(0);
+    backface-visibility: hidden;
+    transition: 1.5s all cubic-bezier(0.19, 1, 0.22, 1);
+    animation: mZoomFadeSmall var(--m-duration-animate) ease forwards;
+}
+.shop-by-categories .shop-product-image:hover{
+    transform: scale(1) translateZ(0);
+    transform: scale(1.08) translateZ(0);
+    transition: 1.5s all cubic-bezier(0.19, 1, 0.22, 1);
+}
+.collection-card{
+    overflow: hidden;
+}
+.shop-by-categories .collection-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+.shop-by-categories .categories-column {
+    position: relative;
+    
+}
+.shop-by-categories .shop-product-content h4{
+    font-size: 25px;
+    margin: 0;
+    color: #000;
+}
+.shop-by-categories .shop-product-content p{
+    font-size: 17px;
+    margin-top: 2px;
+    margin-bottom: 0;
+    color: #666666;
+}
+.shop-by-categories .shop-product-content {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+}
+.shop-by-categories .shop-product-svg{
+    position: absolute;
+    bottom: 35px;
+    right: 30px;
+}
+.shop-product-svg a{
+    background-color: #fff;
+    padding: 13px 15px;
+    border-radius: 45px;
+}
+.shop-product-svg svg{
+    color: black;
+    position: relative;
+    top: 2px;
+}
+.shop-product-image:hover .shop-product-svg svg{
+    color: white;
+}
+.shop-product-image:hover .shop-product-svg a{
+    background-color: black;
+}
+.categories-column{
+    
+}
+.categories-column:hover{
+    
+}

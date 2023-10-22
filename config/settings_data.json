@@ -154,6 +154,10 @@
           "padding_bottom": 36
         }
       },
+      "swatch-colors": {
+        "type": "swatch-colors",
+        "settings": {}
+      },
       "main-password-header": {
         "type": "main-password-header",
         "settings": {
@@ -168,6 +172,13 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "1027443428159536739": {
+        "type": "shopify:\/\/apps\/hextom-quick-announcement-bar\/blocks\/qab-embeded-block\/9ac2a261-3b8b-42c8-9613-d34eb2e079d3",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "background-1": {
         "settings": {
