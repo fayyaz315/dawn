@@ -2,28 +2,10 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement-bar": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement-bar-0": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "announcement-bar-0"
-      ],
+    "f6f3b9c0-4090-464d-bb32-07978bbe4e43": {
+      "type": "notification-bar",
       "settings": {
-        "color_scheme": "",
-        "show_line_separator": true,
-        "show_social": false,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "enable_country_selector": false,
-        "enable_language_selector": false
+        "template": "full--spring"
       }
     },
     "header": {
@@ -46,7 +28,7 @@
     }
   },
   "order": [
-    "announcement-bar",
+    "f6f3b9c0-4090-464d-bb32-07978bbe4e43",
     "header"
   ]
 }

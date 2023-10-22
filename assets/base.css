@@ -3758,3 +3758,210 @@ section.main-product-section.container {
 #shopify-section-template--14983386759219__banner{
   display: none;
 }
+
+
+
+  /* ------------------------------------------ */
+    /* ----------- Default Style ----------- */
+    /* ------------------------------------------ */
+    .notification-bar{
+      text-align: center;
+      margin: 0px;
+      padding: 12px 0px;
+      left: 0px;
+      height: auto;
+      width: 100%;
+      box-sizing: border-box;
+      border: none;
+      background-color: rgb(235, 62, 62);
+      color: rgb(255, 255, 255);
+      font-size: 16px;
+      line-height: 20px;
+      font-family: Helvetica;
+      
+  }
+
+  .notification-bar .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      font-size: 15px;
+  }
+
+  .notification-bar p {
+      color: #fff;
+      margin: 0 20px 0px 0;
+  }
+
+  .notification-bar a {
+      display: inline-block;
+      text-decoration: none;
+      background: #49cc97;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+  }
+
+  /* ------------------------------------------ */
+  /* ----------- Bold & Clear Style ----------- */
+  /* ------------------------------------------ */
+
+  .notification-bar.bold--clear{background:#1e1e20;}
+  .notification-bar.bold--clear p{color:#f2ca80;}
+  .notification-bar.bold--clear a{color:#1e1e20; background: #f2ca80;}
+
+  /* ------------------------------------------ */
+  /* ----------- Shades of grey Style ----------- */
+  /* ------------------------------------------ */
+
+  .notification-bar.shades--grey{background:#4c4c4c;}
+  .notification-bar.shades--grey p{color:#ccc;}
+  .notification-bar.shades--grey a{color:#1e1e20; background: #f2ca80;}
+
+  /* ------------------------------------------ */
+  /* ----------- Bright & Elegant Style ----------- */
+  /* ------------------------------------------ */
+
+  .notification-bar.bright--elegant{background:#f2f2f2;}
+  .notification-bar.bright--elegant p{color:#354B5E;}
+  .notification-bar.bright--elegant a{color:#fff; background: #F23E43;}
+
+  /* ------------------------------------------ */
+  /* ----------- It's Easy Style ----------- */
+  /* ------------------------------------------ */
+
+  .notification-bar.it--easy{background:#fff;}
+  .notification-bar.it--easy p{color:#FF6D37;}
+  .notification-bar.it--easy a{color:#fff; background: #FF6D37;}
+
+  /* ------------------------------------------ */
+  /* ----------- Harvest Gold Style ----------- */
+  /* ------------------------------------------ */
+
+  .notification-bar.harvest--gold{background:#fff0a5;}
+  .notification-bar.harvest--gold p{color:#B64926;}
+  .notification-bar.harvest--gold a{color:#8E2800; background: #FFB03B;}
+
+  /* ------------------------------------------ */
+  /* ----------- Good Mood Style ----------- */
+  /* ------------------------------------------ */
+
+  .notification-bar.good-mood{background:#c7f9d8;}
+  .notification-bar.good-mood p{color:#3F3F3F;}
+  .notification-bar.good-mood a{color:#FFE3C9; background: #F25B37;}
+
+  /* ------------------------------------------ */
+  /* ----------- Trust Me Style ----------- */
+  /* ------------------------------------------ */
+
+  .notification-bar.trust--me{background:#05aff2;}
+  .notification-bar.trust--me p{color:#F2F2F2;}
+  .notification-bar.trust--me a{color:#242620; background: #FFC229;}
+
+  /* ------------------------------------------ */
+  /* ----------- Fairy Tale Style ----------- */
+  /* ------------------------------------------ */
+
+  .notification-bar.fairy--tale{background:#ffd9d2;}
+  .notification-bar.fairy--tale p{color:#7F4D43;}
+  .notification-bar.fairy--tale a{color:#FAE8EB; background: #F94D4A;}
+
+  /* ------------------------------------------ */
+  /* ----------- Important Things Style ----------- */
+  /* ------------------------------------------ */
+
+  .notification-bar.important-things{background:#eb3e3e;}
+  .notification-bar.important-things p{color:#FFF681;}
+  .notification-bar.important-things a{color:#eb3e3e; background: #F2F2F2;}
+
+  /* ----------- Background techture Style ----------- */
+
+  /* ------------------------------------------ */
+  /* ----------- Black Diamond Style ----------- */
+  /* ------------------------------------------ */
+  .notification-bar.background--none{background: transparent;border-bottom: 0.1rem solid rgba(var(--color-foreground),.08);}
+  .notification-bar.background--none p{color: #000;}
+  .notification-bar.background--none a{color: #fff;background-color: #000000;}
+  
+  .notification-bar.black--diamond{background:url('https://cdn.shopify.com/s/files/1/2237/9539/files/20180403_template_dark_sharp_edges.png?v=1697700340');}
+  .notification-bar.black--diamond p{color:#fff;}
+  .notification-bar.black--diamond a{color:#fff; background: #FF6D37;}
+
+  .notification-bar.amazonian{background:url('https://s3.amazonaws.com/lastsecondcoupon/img/bar_background/20180403_template_dust.png');}
+  .notification-bar.amazonian p{color:#EAD7BA;}
+  .notification-bar.amazonian a{color:#332007; background: #FFC229;}
+
+  .notification-bar.nikki{background:url('https://s3.amazonaws.com/lastsecondcoupon/img/bar_background/20180403_template_seigaiha.png');}
+  .notification-bar.nikki p{color:#6B6B6B;}
+  .notification-bar.nikki a{color:#F2F2F2; background: #ED3E68;}
+
+
+  .notification-bar.gift--spark{background:url('https://s3.amazonaws.com/lastsecondcoupon/img/bar_background/20180403_template_memphis-colorful.png');}
+  .notification-bar.gift--spark p{color:#6B6B6B;}
+  .notification-bar.gift--spark a{color:#FFF; background: #FF7878;}
+
+
+  .notification-bar.new--day{background:url('https://s3.amazonaws.com/lastsecondcoupon/img/bar_background/20180403_template_halftone-yellow.png');}
+  .notification-bar.new--day p{color:#875A3C;}
+  .notification-bar.new--day a{color:#FFF0A5; background: #ED5A32;}
+
+
+  .notification-bar.full--spring{background:url('https://s3.amazonaws.com/lastsecondcoupon/img/bar_background/20180403_template_congruent_pentagon.png');}
+  .notification-bar.full--spring p{color:#3F3F3F;}
+  .notification-bar.full--spring a{color:#FFFFFF; background: #FF3C47;}
+
+
+  .notification-bar.summer--wave{background:url('https://s3.amazonaws.com/lastsecondcoupon/img/bar_background/20180403_template_waves.png');}
+  .notification-bar.summer--wave p{color:#002B38;}
+  .notification-bar.summer--wave a{color:#161616; background: #FFC229;}
+
+
+  .notification-bar.rose--makeup{background:url('https://s3.amazonaws.com/lastsecondcoupon/img/bar_background/20180403_template_acrylic.png');}
+  .notification-bar.rose--makeup p{color:#E8535E;}
+  .notification-bar.rose--makeup a{color:#FFFFFF; background: #3DB7B7;}
+
+
+  .notification-bar.classic-xmas{background:url('https://s3.amazonaws.com/lastsecondcoupon/img/bar_background/20180403_template_christmas.png');}
+  .notification-bar.classic-xmas p{color:#FFFFFF;}
+  .notification-bar.classic-xmas a{color:#FFFFFF; background: #49CC97;}
+
+  .notification-bar.bold--clear{background-color: #1e1e20;}
+  .notification-bar.bold--clear p{color:#F2CA80;}
+  .notification-bar.bold--clear a{color:#2A2C2B; background: #D8AB2E;}
+
+  .notification-bar.shades--grey{background-color: #4c4c4c;}
+  .notification-bar.shades--grey p{color:#CCCCCC;}
+  .notification-bar.shades--grey a{color:#332007; background: #FFC229;}
+
+
+  .notification-bar.bright--elegant{background-color: #f2f2f2;}
+  .notification-bar.bright--elegant p{color:#354B5E;}
+  .notification-bar.bright--elegant a{color:#332007; background: #f2f2f2;}
+
+  .notification-bar.it--easy{background-color: #FFFFFF;}
+  .notification-bar.it--easy p{color:#FF6D37;}
+  .notification-bar.it--easy a{color:#FFFFFF; background: #FF6D37;}
+
+
+  .notification-bar.harvest--gold{background-color: #fff0a5;}
+  .notification-bar.harvest--gold p{color:#B64926;}
+  .notification-bar.harvest--gold a{color:#8E2800; background: #FFB03B;}
+
+  .notification-bar.good--mood{background-color: #c7f9d8;}
+  .notification-bar.good--mood p{color:#3F3F3F;}
+  .notification-bar.good--mood a{color:#FFE3C9; background: #F25B37;}
+
+  .notification-bar.trust--me{background-color: #05aff2;}
+  .notification-bar.trust--me p{color:#F2F2F2;}
+  .notification-bar.trust--me a{color:#242620; background: #FFC229;}
+
+
+  .notification-bar.fairy--tale{background-color: #ffd9d2;}
+  .notification-bar.fairy--tale p{color:#7F4D43;}
+  .notification-bar.fairy--tale a{color:#FAE8EB; background: #F94D4A;}
+
+
+  .notification-bar.important--things{background-color: #eb3e3e;}
+  .notification-bar.important--things p{color:#FFF681;}
+  .notification-bar.important--things a{color:#E85756; background: #FFFFFF;}

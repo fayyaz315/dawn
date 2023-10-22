@@ -5,280 +5,278 @@
     "15cdb4fb-4396-41e9-b38d-4410ea5e1efd": {
       "type": "swatch-colors",
       "blocks": {
-        "537b34f1-b3c9-4989-bb71-10adcb249bea": {
+        "7bfccc20-d27f-44c1-8edf-799737feaf60": {
           "type": "color_swatches",
           "settings": {
-            "title": "Beige",
-            "color": "#d0b8a8"
+            "title": "Blue",
+            "color": "#bcc5c9",
+            "color2": "",
+            "color3": ""
           }
         },
-        "b386147e-77de-4b13-9627-72194beab511": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Dark gray",
-            "color": "#3c4048"
-          }
-        },
-        "992ee39b-97ec-460c-804a-84ec570e9526": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Turquesa",
-            "color": "#35a29f"
-          }
-        },
-        "fc1e8fd6-95ae-4db4-9a3d-eace5206e5bb": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Black",
-            "color": "#000000"
-          }
-        },
-        "42bdebee-0746-49e1-86cb-9ceb388d7fd9": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "White",
-            "color": "#f5f5f5"
-          }
-        },
-        "8e5b8b44-6d5c-4ac5-b2c8-f2e190db8c22": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Yellow",
-            "color": "#fedb39"
-          }
-        },
-        "7a61ef10-ff99-4764-b4de-5b0dae951dee": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Pink",
-            "color": "#f7c8e0"
-          }
-        },
-        "188a3760-e232-4aa2-b6e0-0d26e24b82db": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Green",
-            "color": "#5d9c59"
-          }
-        },
-        "a4c0d787-5314-4b52-ae7f-cd1fcd7533c3": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Mostaza",
-            "color": "#e7b10a"
-          }
-        },
-        "1523c2d9-7690-426a-8ca5-b6da0efeba2a": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Beige",
-            "color": "#d0b8a8"
-          }
-        },
-        "644502c0-231a-41db-8115-6bb6cedc127a": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Black",
-            "color": "#000000"
-          }
-        },
-        "53fa5982-d223-4d0c-8687-ca7a7d36e141": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "White",
-            "color": "#f5f5f5"
-          }
-        },
-        "5bfd56bf-871e-42ef-9244-785e307b2957": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Moss Gray",
-            "color": "#94b49f"
-          }
-        },
-        "49c31926-e36a-42f5-9921-dad8ae22fa8f": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Green",
-            "color": "#5d9c59"
-          }
-        },
-        "18066418-bb59-40cb-b3e3-27d1b117bbfa": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Salmon",
-            "color": "#fa8072"
-          }
-        },
-        "3e9f57b4-a723-43ee-9680-8e1acabf070e": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Blue violet",
-            "color": "#4e31aa"
-          }
-        },
-        "6814173b-bd4f-4188-b463-186ae2c21423": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Malva",
-            "color": "#f5eaea"
-          }
-        },
-        "1f885309-1c0a-443a-af63-88c62fb36975": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Mustard",
-            "color": "#e7b10a"
-          }
-        },
-        "072296b3-cf17-4831-8a99-a33d31de865c": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Lavender",
-            "color": "#bface2"
-          }
-        },
-        "91f6d4be-b83b-4d35-9cdf-5cfe8f98c4e7": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Red Rose",
-            "color": "#790252"
-          }
-        },
-        "8e880bb7-7166-485e-89b2-9dbc47f829e2": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Lilac",
-            "color": "#debace"
-          }
-        },
-        "af277dcc-af18-45e6-b47c-24c74c6af442": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Green",
-            "color": "#5d9c59"
-          }
-        },
-        "bd578c62-1147-43ba-b866-374959d8dd18": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Black",
-            "color": "#000000"
-          }
-        },
-        "356fbd22-e13c-443d-81c3-9998c5182bbe": {
+        "75db2a35-abd9-416b-910a-f8ea234a612e": {
           "type": "color_swatches",
           "settings": {
             "title": "Red",
-            "color": "#ff0000"
+            "color": "#b54530",
+            "color2": "",
+            "color3": ""
           }
         },
-        "c5e42c04-f4ee-4a77-904e-2e998c3cfa67": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Beige",
-            "color": "#d0b8a8"
-          }
-        },
-        "9fd5aabf-a4fa-49fd-8a57-ec24baee64a0": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Dark gray",
-            "color": "#3c4048"
-          }
-        },
-        "6dcf2fdf-723d-41ff-a38d-83e1f82b4225": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Mostaza",
-            "color": "#e7b10a"
-          }
-        },
-        "5bc1912b-fec3-4957-928b-10a9ef602819": {
-          "type": "color_swatches",
-          "settings": {
-            "title": "Rosa Tuscany",
-            "color": "#716f81"
-          }
-        },
-        "f79645c4-c3cd-4091-9158-78af3bccfd9f": {
+        "70a5bba2-01f2-4ea4-869f-b7d9516f643c": {
           "type": "color_swatches",
           "settings": {
             "title": "Green",
-            "color": "#5d9c59"
+            "color": "#456558",
+            "color2": "",
+            "color3": ""
           }
         },
-        "6b7c37ef-b333-4dcb-bd2a-1634610aaf5d": {
+        "b2b5cfd6-4d7c-4d19-b028-21053ed522c7": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Yellow",
+            "color": "#cbb96d",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "7d7f6ce5-6189-4f25-b96c-c71645acd078": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Sand",
+            "color": "#e1d0bb",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "ee59a679-9b44-4c37-9107-960bdef19292": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Light Green",
+            "color": "#b7bfb7",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "8ffcf598-d33a-45a7-92a6-b8f800dc0a36": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Grey",
+            "color": "#d5d4d9",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "c92e9dc6-94e1-4d92-b2f0-98a160f1b2b1": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Light Blue",
+            "color": "#abcee2",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "59cdeac8-60a3-4a34-929b-6aacfdb1ddfd": {
           "type": "color_swatches",
           "settings": {
             "title": "White",
-            "color": "#f5f5f5"
+            "color": "#d8d5d7",
+            "color2": "",
+            "color3": ""
           }
         },
-        "46ccf746-48fa-4f60-a884-0fc96b5c4651": {
+        "c35bfafe-3a72-4a82-8683-9fbc37c664b5": {
           "type": "color_swatches",
           "settings": {
             "title": "Black",
-            "color": "#000000"
+            "color": "#2f2e31",
+            "color2": "",
+            "color3": ""
           }
         },
-        "492b9015-200e-4b6b-b77d-22d1a1580153": {
+        "5b6aa8ae-1d45-413c-8616-fe7d2820d79c": {
           "type": "color_swatches",
           "settings": {
-            "title": "Negro",
-            "color": "#000000"
+            "title": "Dark Blue",
+            "color": "#1e3a56",
+            "color2": "",
+            "color3": ""
           }
         },
-        "bd739148-a547-47d4-ad78-ac579145f8fe": {
+        "0e7d201b-e231-461f-a739-c862d0ca8106": {
           "type": "color_swatches",
           "settings": {
-            "title": "Blanco",
-            "color": "#f5f5f5"
+            "title": "Cream",
+            "color": "#dfd8c3",
+            "color2": "",
+            "color3": ""
           }
         },
-        "14bfd0a5-946d-410e-ab1b-7a38bd487ec4": {
+        "bc2c364a-e2b3-4e70-81e4-7a2bd6fdfd6d": {
           "type": "color_swatches",
           "settings": {
-            "title": "Transparente",
-            "color": "#888888"
+            "title": "Beige",
+            "color": "#d7ccbb",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "c3e7c763-4bbe-4a26-ac54-7617bc239953": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Brown",
+            "color": "#6d4f39",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "9b876104-9cd3-4e01-ad31-0a142be36701": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Floral",
+            "color": "#777a79",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "24edd7b5-ffbf-45ea-8b6e-64e23cf587b8": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Silver",
+            "color": "#c6cbca",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "fc204bb2-3407-48eb-9b7c-d394b6d373d2": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Pale Grey",
+            "color": "#a3a29a",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "570fd520-c159-4a7c-9b8f-fe5465a00973": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Lead",
+            "color": "#5b5c66",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "a701f67f-b2f4-45cd-a356-6360292b923f": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Khaki",
+            "color": "#72816a",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "76a573cc-d8a3-472a-9753-eefbd3b3b853": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Camel",
+            "color": "#c6b198",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "20c47feb-cf38-429c-b0f5-15f7d72c9a2d": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Pink",
+            "color": "#c49f92",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "39fd8221-06ae-4ee8-ab31-df60b4219d39": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Ivy Green",
+            "color": "#605a45",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "9339a821-3bc2-47d2-b998-5dc7082ddd75": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Light Purple",
+            "color": "#c6aec4",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "c8ba89d6-6a0a-4c84-8dee-b8f887ca0af8": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Mint",
+            "color": "#d8eaeb",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "7348ddb7-0de5-4060-bc82-f660926b17b4": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Gold",
+            "color": "#e4c696",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "3b6c1aa7-636c-4360-8415-480a68a51276": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Dark Green",
+            "color": "#0c5763",
+            "color2": "",
+            "color3": ""
+          }
+        },
+        "f9798cb5-4c0c-4f9b-b26b-3d1078ff488d": {
+          "type": "color_swatches",
+          "settings": {
+            "title": "Light Brown",
+            "color": "#c1bba8",
+            "color2": "",
+            "color3": ""
           }
         }
       },
       "block_order": [
-        "537b34f1-b3c9-4989-bb71-10adcb249bea",
-        "b386147e-77de-4b13-9627-72194beab511",
-        "992ee39b-97ec-460c-804a-84ec570e9526",
-        "fc1e8fd6-95ae-4db4-9a3d-eace5206e5bb",
-        "42bdebee-0746-49e1-86cb-9ceb388d7fd9",
-        "8e5b8b44-6d5c-4ac5-b2c8-f2e190db8c22",
-        "7a61ef10-ff99-4764-b4de-5b0dae951dee",
-        "188a3760-e232-4aa2-b6e0-0d26e24b82db",
-        "a4c0d787-5314-4b52-ae7f-cd1fcd7533c3",
-        "1523c2d9-7690-426a-8ca5-b6da0efeba2a",
-        "644502c0-231a-41db-8115-6bb6cedc127a",
-        "53fa5982-d223-4d0c-8687-ca7a7d36e141",
-        "5bfd56bf-871e-42ef-9244-785e307b2957",
-        "49c31926-e36a-42f5-9921-dad8ae22fa8f",
-        "18066418-bb59-40cb-b3e3-27d1b117bbfa",
-        "3e9f57b4-a723-43ee-9680-8e1acabf070e",
-        "6814173b-bd4f-4188-b463-186ae2c21423",
-        "1f885309-1c0a-443a-af63-88c62fb36975",
-        "072296b3-cf17-4831-8a99-a33d31de865c",
-        "91f6d4be-b83b-4d35-9cdf-5cfe8f98c4e7",
-        "8e880bb7-7166-485e-89b2-9dbc47f829e2",
-        "af277dcc-af18-45e6-b47c-24c74c6af442",
-        "bd578c62-1147-43ba-b866-374959d8dd18",
-        "356fbd22-e13c-443d-81c3-9998c5182bbe",
-        "c5e42c04-f4ee-4a77-904e-2e998c3cfa67",
-        "9fd5aabf-a4fa-49fd-8a57-ec24baee64a0",
-        "6dcf2fdf-723d-41ff-a38d-83e1f82b4225",
-        "5bc1912b-fec3-4957-928b-10a9ef602819",
-        "f79645c4-c3cd-4091-9158-78af3bccfd9f",
-        "6b7c37ef-b333-4dcb-bd2a-1634610aaf5d",
-        "46ccf746-48fa-4f60-a884-0fc96b5c4651",
-        "492b9015-200e-4b6b-b77d-22d1a1580153",
-        "bd739148-a547-47d4-ad78-ac579145f8fe",
-        "14bfd0a5-946d-410e-ab1b-7a38bd487ec4"
+        "7bfccc20-d27f-44c1-8edf-799737feaf60",
+        "75db2a35-abd9-416b-910a-f8ea234a612e",
+        "70a5bba2-01f2-4ea4-869f-b7d9516f643c",
+        "b2b5cfd6-4d7c-4d19-b028-21053ed522c7",
+        "7d7f6ce5-6189-4f25-b96c-c71645acd078",
+        "ee59a679-9b44-4c37-9107-960bdef19292",
+        "8ffcf598-d33a-45a7-92a6-b8f800dc0a36",
+        "c92e9dc6-94e1-4d92-b2f0-98a160f1b2b1",
+        "59cdeac8-60a3-4a34-929b-6aacfdb1ddfd",
+        "c35bfafe-3a72-4a82-8683-9fbc37c664b5",
+        "5b6aa8ae-1d45-413c-8616-fe7d2820d79c",
+        "0e7d201b-e231-461f-a739-c862d0ca8106",
+        "bc2c364a-e2b3-4e70-81e4-7a2bd6fdfd6d",
+        "c3e7c763-4bbe-4a26-ac54-7617bc239953",
+        "9b876104-9cd3-4e01-ad31-0a142be36701",
+        "24edd7b5-ffbf-45ea-8b6e-64e23cf587b8",
+        "fc204bb2-3407-48eb-9b7c-d394b6d373d2",
+        "570fd520-c159-4a7c-9b8f-fe5465a00973",
+        "a701f67f-b2f4-45cd-a356-6360292b923f",
+        "76a573cc-d8a3-472a-9753-eefbd3b3b853",
+        "20c47feb-cf38-429c-b0f5-15f7d72c9a2d",
+        "39fd8221-06ae-4ee8-ab31-df60b4219d39",
+        "9339a821-3bc2-47d2-b998-5dc7082ddd75",
+        "c8ba89d6-6a0a-4c84-8dee-b8f887ca0af8",
+        "7348ddb7-0de5-4060-bc82-f660926b17b4",
+        "3b6c1aa7-636c-4360-8415-480a68a51276",
+        "f9798cb5-4c0c-4f9b-b26b-3d1078ff488d"
       ],
       "settings": {}
     },
