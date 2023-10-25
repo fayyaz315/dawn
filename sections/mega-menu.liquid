@@ -1,0 +1,198 @@
+{% comment %} {% include 'megamenu' %} {% endcomment %}
+<div class="mega-menu-wrapper">
+    <div class="mega-menu-row">
+{% for block in section.blocks %}
+    {% case block.type %}
+        {% when 'megamenu_menu' %}
+<div class="mega-menu-column">
+    <div class="menu-item-inner">
+        {% if block.settings.title != blank %}<h4><a href="{{ block.settings.link }}">{{ block.settings.title }}</a></h4>{% endif %}
+        <ul>
+            {% for link in linklists[block.settings.linklist].links %}
+                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="menu-item-inner">
+        <h4><a href="{{ block.settings.link_2 }}">{{ block.settings.title_2 }}</a></h4>
+        <ul>
+            {% for link in linklists[block.settings.linklist_2].links %}
+                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% when 'megamenu_image' %}
+<div class="mega-menu-column mega-menu-image">
+    <div class="image-grid">
+      <div class="image-box">
+        <div class="img-product-meta">
+          <img src="https://demo.minimog.co/cdn/shop/files/c3.jpg" alt="Outerwear Image">
+          <div class="product-buttons">
+            <a href="#">Shop Now</a>
+          </div>
+        </div>
+        <div class="product-caption">
+          <h4>Outerwear Items</h4>
+        </div>
+      </div>
+      <div class="image-box">
+        <div class="img-product-meta">
+          <img src="https://demo.minimog.co/cdn/shop/files/c4.jpg" alt="Accessories Image">
+          <div class="product-buttons">
+            <a href="#">Shop Now</a>
+          </div>
+        </div>
+        <div class="product-caption">
+          <h4>Accessories Items</h4>
+        </div>
+      </div>
+      <div class="image-box">
+          <div class="img-product-meta">
+            <img src="https://demo.minimog.co/cdn/shop/files/c1.jpg" alt="Jeans Image">
+            <div class="product-buttons">
+              <a href="#">Shop Now</a>
+            </div>
+          </div>
+          <div class="product-caption">
+            <h4>Jeans Wears</h4>
+          </div>
+      </div>
+      <div class="image-box">
+        <div class="img-product-meta">
+          <img src="https://demo.minimog.co/cdn/shop/files/c2.jpg" alt="T-Shirts Image">
+          <div class="product-buttons">
+            <a href="#">Shop Now</a>
+          </div>
+        </div>
+        <div class="product-caption">
+          <h4>T-Shirts</h4>
+        </div>
+      </div>
+    </div>
+</div>
+{% endcase %}
+{% endfor %}
+</div>
+</div>
+  {% schema %}
+    {
+      "name": "Megamenu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "megamenu_image",
+          "name": "Image Column",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image_1",
+              "label": "Image 1"
+            },
+            {
+              "type": "text",
+              "id": "caption_1",
+              "label": "Caption 1"
+            },
+            {
+              "type": "url",
+              "id": "link_1",
+              "label": "Link 1"
+            },
+            {
+              "type": "image_picker",
+              "id": "image_2",
+              "label": "Image 2"
+            },
+            {
+              "type": "text",
+              "id": "caption_2",
+              "label": "Caption 2"
+            },
+            {
+              "type": "url",
+              "id": "link_2",
+              "label": "Link 2"
+            },
+            {
+              "type": "image_picker",
+              "id": "image_3",
+              "label": "Image 3"
+            },
+            {
+              "type": "text",
+              "id": "caption_3",
+              "label": "Caption 3"
+            },
+            {
+              "type": "url",
+              "id": "link_3",
+              "label": "Link 3"
+            },
+            {
+              "type": "image_picker",
+              "id": "image_4",
+              "label": "Image 4"
+            },
+            {
+              "type": "text",
+              "id": "caption_4",
+              "label": "Caption 4"
+            },
+            {
+              "type": "url",
+              "id": "link_4",
+              "label": "Link 4"
+            }
+          ]
+        },
+        {
+          "type": "megamenu_menu",
+          "name": "Menu Column",
+          "settings": [
+            {
+              "type": "text",
+              "id": "title",
+              "label": "Title"
+            },
+            {
+              "type": "url",
+              "id": "link",
+              "label": "Link"
+            },
+            {
+              "type": "link_list",
+              "id": "linklist",
+              "label": "Linklist"
+            },
+            {
+              "type": "text",
+              "id": "title_2",
+              "label": "Title"
+            },
+            {
+              "type": "url",
+              "id": "link_2",
+              "label": "Link"
+            },
+            {
+              "type": "link_list",
+              "id": "linklist_2",
+              "label": "Linklist"
+            }
+          ]
+        }
+      ],
+      "presets":[
+        {
+          "name":"Mega menu"
+        }
+      ]
+    }
+  {% endschema %}

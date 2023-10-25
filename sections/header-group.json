@@ -2,14 +2,108 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "f6f3b9c0-4090-464d-bb32-07978bbe4e43": {
-      "type": "notification-bar",
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0"
+      ],
       "settings": {
-        "template": "full--spring"
+        "color_scheme": "",
+        "show_line_separator": true,
+        "show_social": false,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
       }
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "4ecdcc52-ad64-4984-b713-d6488fca0a01": {
+          "type": "menu",
+          "settings": {
+            "title": "Clothing",
+            "linklist": "clothing",
+            "image_1": "shopify:\/\/shop_images\/c1.jpg",
+            "caption_1": "Outerwear Items",
+            "link_1": "",
+            "image_2": "shopify:\/\/shop_images\/c2.jpg",
+            "caption_2": "Accessories Items",
+            "link_2": "",
+            "image_3": "shopify:\/\/shop_images\/c3.jpg",
+            "caption_3": "Jeans Wears",
+            "link_3": "",
+            "image_4": "shopify:\/\/shop_images\/c4.jpg",
+            "caption_4": "T-Shirts",
+            "link_4": ""
+          }
+        },
+        "b9308263-ae84-4f2e-8d4d-a235e97278b6": {
+          "type": "menu",
+          "settings": {
+            "title": "Electronics",
+            "linklist": "electronics",
+            "image_1": "shopify:\/\/shop_images\/12_d32581ea-d4b2-4bf6-9a26-36d977c9924d.jpg",
+            "caption_1": "",
+            "link_1": "",
+            "image_2": "shopify:\/\/shop_images\/10_97f923e3-0ef4-4901-b73b-bb8c9919c6de.jpg",
+            "caption_2": "",
+            "link_2": "",
+            "image_3": "shopify:\/\/shop_images\/10a_3d87b0dd-2c31-421c-9e05-7f38f3119fdd.jpg",
+            "caption_3": "",
+            "link_3": "",
+            "image_4": "shopify:\/\/shop_images\/10b_9f217181-8d2f-43af-ad99-a23244cd250f.jpg",
+            "caption_4": "",
+            "link_4": ""
+          }
+        },
+        "ce046279-1143-406b-aeb2-ac47eeb4dc0d": {
+          "type": "image",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/c1.jpg",
+            "caption_1": "Outerwear Items",
+            "link_1": "",
+            "image_2": "shopify:\/\/shop_images\/c2.jpg",
+            "caption_2": "Accessories Items",
+            "link_2": "",
+            "image_3": "shopify:\/\/shop_images\/c3.jpg",
+            "caption_3": "Jeans Wears",
+            "link_3": "",
+            "image_4": "shopify:\/\/shop_images\/c4.jpg",
+            "caption_4": "T-Shirts",
+            "link_4": ""
+          }
+        },
+        "63203adc-86f4-4d3d-85c1-21b0f46c431b": {
+          "type": "image",
+          "settings": {
+            "caption_1": "",
+            "link_1": "",
+            "caption_2": "",
+            "link_2": "",
+            "caption_3": "",
+            "link_3": "",
+            "caption_4": "",
+            "link_4": ""
+          }
+        }
+      },
+      "block_order": [
+        "4ecdcc52-ad64-4984-b713-d6488fca0a01",
+        "b9308263-ae84-4f2e-8d4d-a235e97278b6",
+        "ce046279-1143-406b-aeb2-ac47eeb4dc0d",
+        "63203adc-86f4-4d3d-85c1-21b0f46c431b"
+      ],
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
@@ -28,7 +122,7 @@
     }
   },
   "order": [
-    "f6f3b9c0-4090-464d-bb32-07978bbe4e43",
+    "announcement-bar",
     "header"
   ]
 }

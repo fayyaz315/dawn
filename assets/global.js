@@ -1303,4 +1303,15 @@ $( document ).ready(function() {
     $counter.find('.current').text(currentSlide + 1);
   });
 
+
+
+  $('.banner-slider').slick({
+    dots: false,
+    arrows: true,
+    fade: true,
+    prevArrow: '<svg class="arrow-left" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+    nextArrow: '<svg class="arrow-right" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+    slidesToShow: 1,
+  });
+
 });

@@ -14,6 +14,13 @@
           "type": "title",
           "settings": {}
         },
+        "b3880cdb-cbff-4968-afd3-8e9bdb317a27": {
+          "type": "shopify:\/\/apps\/remix-demo-app\/blocks\/star_rating\/4a438c4a-14da-40b4-a3e1-3890dc24fe6c",
+          "settings": {
+            "product": "{{product}}",
+            "colour": "#ff0000"
+          }
+        },
         "caption": {
           "type": "text",
           "settings": {
@@ -24,6 +31,20 @@
         "price": {
           "type": "price",
           "settings": {}
+        },
+        "loox-rating": {
+          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "contentSize": 16,
+            "pattern": "",
+            "hideText": false,
+            "alignment": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -38,7 +59,8 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
           }
         },
         "description": {
@@ -86,15 +108,12 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "loox-rating": {
-          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-          "settings": {}
         }
       },
       "block_order": [
         "vendor",
         "title",
+        "b3880cdb-cbff-4968-afd3-8e9bdb317a27",
         "caption",
         "price",
         "loox-rating",
@@ -111,12 +130,34 @@
       "settings": {
         "enable_sticky_info": true,
         "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
         "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
       }
     },
     "image-with-text": {
@@ -149,6 +190,7 @@
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "color_scheme": "background-2",
+        "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
@@ -205,6 +247,7 @@
           "settings": {
             "only_photos": false,
             "aggregated": false,
+            "limit": 20,
             "hide_thumbnails": false,
             "maxwidth": 1080
           }
@@ -215,24 +258,6 @@
       ],
       "settings": {
         "include_margins": false
-      }
-    },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "heading": "You may also like",
-        "heading_size": "h2",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
       }
     }
   },

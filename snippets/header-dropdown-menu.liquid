@@ -1,103 +1,66 @@
-{% comment %}
-  Renders a standard dropdown style menu for the header.
-
-  Usage:
-  {% render 'header-dropdown-menu' %}
-{% endcomment %}
-
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
-    {%- for link in section.settings.menu.links -%}
-      <li>
-        {%- if link.links != blank -%}
-          <header-menu>
-            <details id="Details-HeaderMenu-{{ forloop.index }}">
-              <summary
-                id="HeaderMenu-{{ link.handle }}"
-                class="header__menu-item list-menu__item link focus-inset"
-              >
-                <span
-                  {%- if link.child_active %}
-                    class="header__active-menu-item"
-                  {% endif %}
-                >
-                  {{- link.title | escape -}}
-                </span>
-                {% render 'icon-caret' %}
-              </summary>
-              <ul
-                id="HeaderMenu-MenuList-{{ forloop.index }}"
-                class="header__submenu list-menu list-menu--disclosure color-{{ section.settings.menu_color_scheme }} gradient caption-large motion-reduce global-settings-popup"
-                role="list"
-                tabindex="-1"
-              >
-                {%- for childlink in link.links -%}
-                  <li>
-                    {%- if childlink.links == blank -%}
-                      <a
-                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                        href="{{ childlink.url }}"
-                        class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"
-                        {% if childlink.current %}
-                          aria-current="page"
-                        {% endif %}
-                      >
-                        {{ childlink.title | escape }}
-                      </a>
-                    {%- else -%}
-                      <details id="Details-HeaderSubMenu-{{ link.handle }}-{{ childlink.handle }}">
-                        <summary
-                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                          class="header__menu-item link link--text list-menu__item focus-inset caption-large"
-                        >
-                          <span>{{ childlink.title | escape }}</span>
-                          {% render 'icon-caret' %}
-                        </summary>
-                        <ul
-                          id="HeaderMenu-SubMenuList-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                          class="header__submenu list-menu motion-reduce"
-                        >
-                          {%- for grandchildlink in childlink.links -%}
-                            <li>
-                              <a
-                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                href="{{ grandchildlink.url }}"
-                                class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"
-                                {% if grandchildlink.current %}
-                                  aria-current="page"
-                                {% endif %}
-                              >
-                                {{ grandchildlink.title | escape }}
-                              </a>
-                            </li>
-                          {%- endfor -%}
+    {% for link in section.settings.menu.links %}
+      {% assign mega_menu = false %}
+      {% for block in section.blocks %}
+        {% if block.settings.title == link.title %}
+          {% assign mega_menu = true %}
+          <li class="mega-menu-list">
+      <a href="#" class="header__menu-item list-menu__item link link--text focus-inset">
+        {{link.title}}
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="10px" width="10px" version="1.1" id="Layer_1" viewBox="0 0 407.437 407.437" xml:space="preserve">
+          <polygon points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 "/>
+        </svg>
+      </a>
+      <div class="mega-menu-wrapper">
+        <div class="mega-menu-row">
+          {% for child_link in block.settings.linklist.links -%}
+            {% assign reminder = forloop.index | modulo: 2 %}
+            {% if reminder == 1%}
+               <div class="mega-menu-column">
+               {% endif %}
+                    <div class="menu-item-inner">
+                        <h3>{{child_link.title}}</h3>
+                        <ul>
+                         {% for sub_child_link in child_link.links %}
+                            <li><a href="{{ sub_child_link.url }}">{{ sub_child_link.title }}</a></li>
+                        {% endfor %}
                         </ul>
-                      </details>
-                    {%- endif -%}
-                  </li>
-                {%- endfor -%}
-              </ul>
-            </details>
-          </header-menu>
-        {%- else -%}
-          <a
-            id="HeaderMenu-{{ link.handle }}"
-            href="{{ link.url }}"
-            class="header__menu-item list-menu__item link link--text focus-inset"
-            {% if link.current %}
-              aria-current="page"
-            {% endif %}
-          >
-            <span
-              {%- if link.current %}
-                class="header__active-menu-item"
-              {% endif %}
-            >
-              {{- link.title | escape -}}
-            </span>
-          </a>
-        {%- endif -%}
-      </li>
-    {%- endfor -%}
-  </ul>
+                    </div>
+                    {% if reminder == 0 %}
+                    </div>
+                     {% endif %}
+               {% endfor %}
+               <div class="mega-menu-column mega-menu-image">
+                <div class="image-grid">
+                  {% for i in (1..4) %}
+                    {% assign caption = "caption_" | append : i %}
+                    {% assign image = "image_" | append : i %}
+                    {% assign link = "link_" | append : i %}
+                    {% if block.settings[image] != blank%}
+                  <div class="image-box">
+                    <div class="img-product-meta">
+                      <img src="{{block.settings[image] | img_url: '500x'}}'" alt="Outerwear Image">
+                      <div class="product-buttons">
+                        <a href="{{ block.settings[link] }}">Shop Now</a>
+                      </div>
+                    </div>
+                    <div class="product-caption">
+                      <h4>{{ block.settings[caption] }}</h4>
+                    </div>
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+        {% endif %}
+      {% endfor %}
+      {% if mega_menu == false %}
+        <li><a href="{{link.url}}" class="header__menu-item list-menu__item link link--text focus-inset ">{{link.title}}</a></li>
+      {% endif %}
+    {% endfor %}
+</ul>
 </nav>

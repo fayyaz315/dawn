@@ -1,0 +1,197 @@
+<div class="main-banner-wrapper">
+    <div class="banner-inner-wrapper">
+        <div class="banner-slider">
+            <div class="banner-slide">
+                <div class="banner-img">
+                    <img src="https://www.brandeis.edu/cms-guide/building-editing/content-types/images/banner-single-sample.jpg" alt="img" />
+                </div>
+                <div class="banner-content">
+                   <div class="text">
+                        <h2>Image Banner</h2>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        <a href="#" class="btn">Learn More</a>
+                   </div>
+                </div>
+            </div>
+            <div class="banner-slide">
+                <div class="banner-img">
+                    <video autoplay muted loop>
+                        <source src="https://cdn.shopify.com/videos/c/o/v/2297ba310b7a4ce6b39b876c1641d9be.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="banner-content">
+                   <div class="text">
+                        <h2>Image Banner</h2>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        <a href="#" class="btn">Learn More</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+
+.banner-inner-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.banner-slide{
+    position: relative;
+}
+.banner-img {
+    position: relative;
+    line-height: 0;
+}
+.banner-img::after{
+    content: "";
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.banner-img img,
+.banner-img video,
+.banner-img iframe {
+    width: 100%;
+    height: 70vh;
+    min-height: 400px;
+    object-fit: cover;
+}
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 60px 50px;
+}
+.banner-content .text {
+    max-width: 600px;
+    width: 100%;
+}
+.banner-content.w-100 .text{
+    max-width: 100%;
+}
+.banner-content.text-center{
+    text-align: center;
+}
+.banner-content.text-center .text{
+    margin: 0 auto;
+}
+.banner-content.text-right{
+    text-align: right;
+}
+.banner-content.text-right .text{
+    margin-left: auto;
+}
+.banner-content h2 {
+    font-size: 42px;
+    margin: 0 0 0;
+    font-weight: 600;
+    color: #fff;
+    transition: all 1.5s;
+    opacity: 0;
+    transform: translateY(-100px);
+}
+.banner-content p {
+    margin: 15px 0 0;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.5;
+    transition: all 1.5s;
+    opacity: 0;
+    transform: translateX(100px);
+}
+.banner-content .btn {
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 30px;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: all 1.5s;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.banner-slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: #000;
+    border-radius: 50%;
+    color: #fff;
+    padding: 12px;
+    z-index: 3;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.banner-slider:hover .slick-arrow{
+    opacity: 1;
+}
+.banner-slider .slick-arrow:hover{
+    background: #fff;
+    color: #000;
+}
+.banner-slider .arrow-right.slick-arrow {
+    left: auto;
+    right: 15px;
+}
+
+/* BANNER ANIMATION */
+
+.banner-slide.slick-active .banner-content h2{
+    opacity: 1;
+    transform: translate(0px);
+}
+.banner-slide.slick-active .banner-content p{
+    opacity: 1;
+    transform: translate(0px);
+}
+.banner-slide.slick-active .banner-content .btn{
+    opacity: 1;
+    transform: translate(0px);
+}
+
+
+@media(max-width: 767.98px){
+    .banner-slider .slick-arrow {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        left: 8px;
+        opacity: 1;
+    }
+    .banner-slider .arrow-right.slick-arrow {
+        right: 8px;
+    }
+    .banner-content h2 {
+        font-size: 30px;
+    }
+}
+
+</style>
+
+{% schema %}
+{
+    "name":"Slide show",
+    "settings":[]
+}
+{% endschema %}

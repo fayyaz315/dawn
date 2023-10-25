@@ -3965,3 +3965,139 @@ section.main-product-section.container {
   .notification-bar.important--things{background-color: #eb3e3e;}
   .notification-bar.important--things p{color:#FFF681;}
   .notification-bar.important--things a{color:#E85756; background: #FFFFFF;}
+  .mega-menu-wrapper {
+    display: none;
+    position: absolute;
+    top: calc(100% - 36px);
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .mega-menu-list:hover .mega-menu-wrapper {
+    display: block;
+  }
+  .mega-menu-list a svg{
+    margin-left: 5px;
+    display: inline-block;
+    max-width: 8px;
+  }
+  .mega-menu-row {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+  }
+  
+  .mega-menu-column {
+    flex: 1;
+    padding: 0 10px;
+  }
+  
+  .menu-item-inner {
+    margin-bottom: 20px;
+  }
+  
+  .mega-menu-wrapper h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: 600;
+  }
+  
+  .mega-menu-wrapper ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .mega-menu-wrapper ul li {
+    margin: 0;
+    padding: 2px 0;
+  }
+  
+  .mega-menu-image {
+    flex: 1;
+  }
+  
+  .mega-menu-wrapper ul li a{
+    text-decoration: none;
+    color: #777;
+    font-size: 16px;
+    display: inline-block;
+    transition: all 0.4s;
+  }
+  .mega-menu-wrapper ul li a:hover{
+    color: #333;
+    text-decoration: underline;
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+  
+  .image-box {
+      padding-bottom: 10px;
+  }
+  .image-box img{
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .image-box:hover img{
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  .img-product-meta {
+      position: relative;
+      overflow: hidden;
+  }
+  
+  .img-product-meta .product-buttons {
+      position: absolute;
+      bottom: -35px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      opacity: 0;
+      transition: all 0.3s;
+  }
+  
+  .img-product-meta:hover .product-buttons{
+      bottom: 7px;
+      opacity: 1;
+  }
+  
+  .product-caption {
+      text-align: center;
+      overflow: hidden;
+  }
+  
+  .product-caption h4 {
+      margin: 0 0 0 0;
+      font-size: 14px;
+  }
+  
+  .img-product-meta .product-buttons a {
+      display: block;
+      font-size: 14px;
+      text-decoration: none;
+      background: #fff;
+      color: #333;
+      padding: 6px;
+      transition: all 0.3s;
+  }
+  
+  .img-product-meta .product-buttons a:hover{
+      background: #222;
+      color: #fff;
+  }

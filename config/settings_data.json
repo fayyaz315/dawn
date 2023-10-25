@@ -177,6 +177,11 @@
         "type": "shopify:\/\/apps\/hextom-quick-announcement-bar\/blocks\/qab-embeded-block\/9ac2a261-3b8b-42c8-9613-d34eb2e079d3",
         "disabled": false,
         "settings": {}
+      },
+      "684478284214565062": {
+        "type": "shopify:\/\/apps\/remix-demo-app\/blocks\/star_rating\/4a438c4a-14da-40b4-a3e1-3890dc24fe6c",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
