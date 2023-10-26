@@ -1,5 +1,57 @@
 {
   "sections": {
+    "c6f70922-8f19-4d22-8d0b-e1142e699f58": {
+      "type": "slideshow",
+      "blocks": {
+        "04e8c42a-8267-4835-9dcc-a6c863f73008": {
+          "type": "image",
+          "settings": {
+            "title": "Image Slider",
+            "text": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<\/p>",
+            "btn_text": "Learn More",
+            "btn_url": "",
+            "image": "shopify:\/\/shop_images\/pexels-andrea-piacquadio-3771071_1.jpg"
+          }
+        },
+        "c728d920-5c45-41ea-a096-4bb065fc640f": {
+          "type": "video",
+          "settings": {
+            "title": "Video Slider",
+            "text": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<\/p>",
+            "btn_text": "Learn More",
+            "btn_url": "",
+            "video_url_mp4": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2297ba310b7a4ce6b39b876c1641d9be.mp4"
+          }
+        },
+        "945fae14-2789-4f3f-8810-476603ebc994": {
+          "type": "image",
+          "settings": {
+            "title": "Image Slider",
+            "text": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<\/p>",
+            "btn_text": "Learn More",
+            "btn_url": "",
+            "image": "shopify:\/\/shop_images\/pexels-godisable-jacob-949670.jpg"
+          }
+        },
+        "e5b48e24-a9f8-4253-be55-7312f18aafe5": {
+          "type": "video",
+          "settings": {
+            "title": "Video Slider",
+            "text": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<\/p>",
+            "btn_text": "Learn More",
+            "btn_url": "",
+            "video_url_mp4": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9fbeefa609434e3d8a398c000c501e57.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "04e8c42a-8267-4835-9dcc-a6c863f73008",
+        "c728d920-5c45-41ea-a096-4bb065fc640f",
+        "945fae14-2789-4f3f-8810-476603ebc994",
+        "e5b48e24-a9f8-4253-be55-7312f18aafe5"
+      ],
+      "settings": {}
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -34,6 +86,7 @@
         "text",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/collection1_1100x_1.png",
         "image_2": "shopify:\/\/shop_images\/collection2_1100x_1.png",
@@ -220,6 +273,7 @@
     }
   },
   "order": [
+    "c6f70922-8f19-4d22-8d0b-e1142e699f58",
     "image_banner",
     "rich_text",
     "featured_collection",
