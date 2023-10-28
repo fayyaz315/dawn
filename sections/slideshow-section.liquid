@@ -1,39 +1,111 @@
 <div class="main-banner-wrapper">
   <div class="banner-inner-wrapper">
     <div class="banner-slider">
-      <div class="banner-slide">
-        <div class="banner-img">
-          <img src="{{ block.settings.image | img_url: '1000x' }}" alt="img">
-          <video autoplay muted loop>
-            <source src="{{ block.settings.video_url_mp4 }}" type="video/mp4">
-          </video>
-        </div>
-        <div class="banner-content">
-          <div class="text">
-            <h2>Image Slider</h2>
-            <p>
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-              letters, as opposed to using 'Content here, content here', making it look like readable English.
-            </p>
-            <a href="#" class="btn">Learn More</a>
+      {% for block in section.blocks %}
+        <div class="banner-slide">
+          <div class="banner-img">
+            {% case block.type %}
+              {% when 'image' %}
+                <img src="{{ block.settings.image | img_url: '1000x' }}" alt="img" />
+              {% when 'video' %}
+                <video
+                  autoplay
+                  muted
+                  loop>
+                  <source src="{{ block.settings.video_url_mp4 }}" type="video/mp4">
+                </video>
+            {% endcase %}
+          </div>
+          <div class="banner-content">
+            <div class="text">
+              <h2>{{ block.settings.title }}</h2>
+              <p>{{ block.settings.text }}</p>
+              <a href="{{ block.settings.btn_url }}" class="btn">{{ block.settings.btn_text }}</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="banner-slide">
-        <div class="banner-img"></div>
-        <div class="banner-content">
-          <div class="text">
-            <h2>Video Slider</h2>
-            <p>
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-              letters, as opposed to using 'Content here, content here', making it look like readable English.
-            </p>
-            <a href="#" class="btn">Learn More</a>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>
+{% schema %}
+  {
+    "name": "Slide Show",
+    "settings": [],
+    "blocks": [
+      {
+        "name": "image",
+        "type": "image",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Image Slider"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>"
+          },
+          {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Botton text",
+            "default": "Learn More"
+          },
+          {
+            "type": "url",
+            "id": "btn_url",
+            "label": "Button url"
+          }, 
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }, {
+        "name": "video",
+        "type": "video",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Video Slider"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>"
+          },
+          {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Botton text",
+            "default": "Learn More"
+          },
+          {
+            "type": "url",
+            "id": "btn_url",
+            "label": "Button url"
+          }, {
+            "type": "text",
+            "id": "video_url_mp4",
+            "label": "Video URL",
+            "placeholder": "Use a MP4 Video URL",
+            "info": "Use a MP4 Video URL"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Slide Show"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,132 +1,101 @@
- {{ 'shop-by-categories.css' | asset_url | stylesheet_tag }}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Add the slick-theme.css if you want default styling -->
-    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
-    <!-- Add the slick-theme.css if you want default styling -->
-    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> -->
-</head>
-<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
-  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<body>
-    <section class="shop-by-categories container">
-    <h2>Shop by Categories</h2>
-    <div class="collection-wrapper">
-        <div class="categories-column">
-            <div class="collection-card">
-            <div class="shop-product-image" style="background-image: url('https://demo.minimog.co/cdn/shop/files/c1.jpg?v=1689748615&width=533');"></div>
-            </div>
-            <div class="shop-product-content">
-                <h4>Sandals</h4>
-                <p>6 items</p>
-            </div> 
-            <div class="shop-product-svg">
-                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" viewBox="0 0 14 13">
-                <path fill="currentColor" d="M6.78594.789062c.16406-.145833.31901-.145833.46484 0L12.9656 6.53125c.1641.14583.1641.29167 0 .4375L7.25078 12.7109c-.14583.1459-.30078.1459-.46484 0l-.54688-.5468c-.05469-.0547-.08203-.1276-.08203-.2188 0-.0911.02734-.1732.08203-.2461l4.23824-4.23826H1.15312c-.218745 0-.32812-.10938-.32812-.32813v-.76562c0-.21875.109375-.32813.32812-.32813h9.32418L6.23906 1.80078c-.14583-.16406-.14583-.31901 0-.46484l.54688-.546878z"></path>
-            </svg></a>
-            </div>  
-        </div>
-        <div class="categories-column">
-            <div class="collection-card">
-            <div class="shop-product-image" style="background-image: url('https://demo.minimog.co/cdn/shop/files/c1.jpg?v=1689748615&width=533');"></div>
-            </div>
-            <div class="shop-product-content">
-                <h4>Sandals</h4>
-                <p>6 items</p>
-            </div> 
-            <div class="shop-product-svg">
-                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" viewBox="0 0 14 13">
-                <path fill="currentColor" d="M6.78594.789062c.16406-.145833.31901-.145833.46484 0L12.9656 6.53125c.1641.14583.1641.29167 0 .4375L7.25078 12.7109c-.14583.1459-.30078.1459-.46484 0l-.54688-.5468c-.05469-.0547-.08203-.1276-.08203-.2188 0-.0911.02734-.1732.08203-.2461l4.23824-4.23826H1.15312c-.218745 0-.32812-.10938-.32812-.32813v-.76562c0-.21875.109375-.32813.32812-.32813h9.32418L6.23906 1.80078c-.14583-.16406-.14583-.31901 0-.46484l.54688-.546878z"></path>
-            </svg></a>
-            </div>  
-        </div>
-        <div class="categories-column">
-            <div class="collection-card">
-            <div class="shop-product-image" style="background-image: url('https://demo.minimog.co/cdn/shop/files/c1.jpg?v=1689748615&width=533');"></div>
-            </div>
-            <div class="shop-product-content">
-                <h4>Sandals</h4>
-                <p>6 items</p>
-            </div> 
-            <div class="shop-product-svg">
-                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" viewBox="0 0 14 13">
-                <path fill="currentColor" d="M6.78594.789062c.16406-.145833.31901-.145833.46484 0L12.9656 6.53125c.1641.14583.1641.29167 0 .4375L7.25078 12.7109c-.14583.1459-.30078.1459-.46484 0l-.54688-.5468c-.05469-.0547-.08203-.1276-.08203-.2188 0-.0911.02734-.1732.08203-.2461l4.23824-4.23826H1.15312c-.218745 0-.32812-.10938-.32812-.32813v-.76562c0-.21875.109375-.32813.32812-.32813h9.32418L6.23906 1.80078c-.14583-.16406-.14583-.31901 0-.46484l.54688-.546878z"></path>
-            </svg></a>
-            </div>  
-        </div>
+<div class="shop-by-categories-wrapper">
+  <div class="container-fluid">
+    <div class="category-heading">
+      <h2>{{ section.settings.title }}</h2>
+      <div class="counter">
+        <span class="current">
+          {{ block_counter }}
+        </span>
+        /
+        <span class="total">
+          {{ section.blocks.size }}
+        </span>
+      </div>
     </div>
-</section>
-</body>
-</html>
-
-
-
-
+    <div class="category-inner-wrapper">
+      <div class="catgory-slider">
+        {% for block in section.blocks %}
+          {% assign collection = block.settings.collection %}
+          <div class="category-item colllection--{{ collection.title | downcase }}">
+            <a href="{% if block.settings.link != blank %} {{block.settings.link}} {% else %} {{ collection.url }}  {% endif %}">
+              <div class="category-image">
+                {% if block.settings.image != blank %}
+                  <img src="{{ block.settings.image | img_url: '2000x' }}" alt="img">
+                {% else %}
+                  <img src="{{ collection.image.src  | img_url: '2000x' }}" alt="img">
+                {% endif %}
+              </div>
+              <div class="category-content">
+                <div class="in-left">
+                  {% if block.settings.title != blank %}
+                    <h3>{{ block.settings.title }}</h3>
+                  {% else %}
+                    <h3>{{ collection.title }}</h3>
+                  {% endif %}
+                  <span>
+                    {%- if collection.products_count == 1 %}
+                      {{ collection.products_count }} Item
+                    {% else %}
+                      {{ collection.products_count }} Items
+                    {% endif -%}
+                  </span>
+                </div>
+                <div class="in-right">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" viewBox="0 0 14 13">
+                    <path fill="currentColor" d="M6.78594.789062c.16406-.145833.31901-.145833.46484 0L12.9656 6.53125c.1641.14583.1641.29167 0 .4375L7.25078 12.7109c-.14583.1459-.30078.1459-.46484 0l-.54688-.5468c-.05469-.0547-.08203-.1276-.08203-.2188 0-.0911.02734-.1732.08203-.2461l4.23824-4.23826H1.15312c-.218745 0-.32812-.10938-.32812-.32813v-.76562c0-.21875.109375-.32813.32812-.32813h9.32418L6.23906 1.80078c-.14583-.16406-.14583-.31901 0-.46484l.54688-.546878z"></path>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
 {% schema %}
+{
+  "name": "Shop by Categories",
+  "settings": [
     {
-      "name": "Shop by Categories",
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Shop by Categories"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Category",
+      "type": "category",
       "settings": [
-      
-      ],
-      "presets": [
         {
-          "name": "Shop by Categories"
+          "type": "collection",
+          "id": "collection",
+          "label": "Select collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
         }
       ]
     }
+  ],
+  "presets": [
+    {
+      "name": "Shop by Categories"
+    }
+  ]
+}
 {% endschema %}
-
-{% comment %} <script>
-  $(function() {
-    var slidesToShow = 1;
-    $('.collection-wrapper').on('init', function(event, slick) {
-      if (slick.slideCount > slidesToShow) {
-      $(this).prepend('<div class="slick-counter"><span class="recently-current"></span>/<span class="recently-total"></span></div>');
-      $('.recently-current').text(slick.currentSlide + 1);
-      $('.recently-total').text(slick.slideCount);
-      }
-    }).slick({
-      autoplay: false,
-      autoplaySpeed: 3000,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      arrows: true,
-      dots:true,
-      centerMode: true,
-      centerPadding: '200px',
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-            centerMode: false
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            centerMode: false
-          }
-        }
-      ]
-    }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-      $('.recently-current').text(nextSlide + 1);
-    });
-  });
-  </script> {% endcomment %}
-
-
-
-
-
-
-

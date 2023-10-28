@@ -1,56 +1,96 @@
 {
   "sections": {
-    "c6f70922-8f19-4d22-8d0b-e1142e699f58": {
+    "f4e07c52-b779-4bf0-94e7-5e39e8c5c6aa": {
       "type": "slideshow",
       "blocks": {
-        "04e8c42a-8267-4835-9dcc-a6c863f73008": {
-          "type": "image",
+        "template--14983386890291__f4e07c52-b779-4bf0-94e7-5e39e8c5c6aa-slide-1": {
+          "type": "slide",
           "settings": {
-            "title": "Image Slider",
-            "text": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<\/p>",
-            "btn_text": "Learn More",
-            "btn_url": "",
-            "image": "shopify:\/\/shop_images\/pexels-andrea-piacquadio-3771071_1.jpg"
-          }
-        },
-        "c728d920-5c45-41ea-a096-4bb065fc640f": {
-          "type": "video",
-          "settings": {
-            "title": "Video Slider",
-            "text": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<\/p>",
-            "btn_text": "Learn More",
-            "btn_url": "",
-            "video_url_mp4": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2297ba310b7a4ce6b39b876c1641d9be.mp4"
-          }
-        },
-        "945fae14-2789-4f3f-8810-476603ebc994": {
-          "type": "image",
-          "settings": {
-            "title": "Image Slider",
-            "text": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<\/p>",
-            "btn_text": "Learn More",
-            "btn_url": "",
-            "image": "shopify:\/\/shop_images\/pexels-godisable-jacob-949670.jpg"
-          }
-        },
-        "e5b48e24-a9f8-4253-be55-7312f18aafe5": {
-          "type": "video",
-          "settings": {
-            "title": "Video Slider",
-            "text": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<\/p>",
-            "btn_text": "Learn More",
-            "btn_url": "",
-            "video_url_mp4": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9fbeefa609434e3d8a398c000c501e57.mp4"
+            "image": "shopify:\/\/shop_images\/pexels-godisable-jacob-949670.jpg",
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "inverse",
+            "text_alignment_mobile": "center"
           }
         }
       },
       "block_order": [
-        "04e8c42a-8267-4835-9dcc-a6c863f73008",
-        "c728d920-5c45-41ea-a096-4bb065fc640f",
-        "945fae14-2789-4f3f-8810-476603ebc994",
-        "e5b48e24-a9f8-4253-be55-7312f18aafe5"
+        "template--14983386890291__f4e07c52-b779-4bf0-94e7-5e39e8c5c6aa-slide-1"
       ],
-      "settings": {}
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "large",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "570571ce-0f95-4ce3-82f3-34434684f474": {
+      "type": "shop-categories",
+      "blocks": {
+        "e9c73398-1609-4c44-8c49-73788b232285": {
+          "type": "category",
+          "settings": {
+            "collection": "sunglasses",
+            "title": "",
+            "link": ""
+          }
+        },
+        "02cbabe2-d70c-4247-b159-61f686ff2f21": {
+          "type": "category",
+          "settings": {
+            "collection": "sandals",
+            "image": "shopify:\/\/shop_images\/c1.jpg",
+            "title": "Sandals",
+            "link": ""
+          }
+        },
+        "d9db39a5-2045-4819-8127-2adb0fddd881": {
+          "type": "category",
+          "settings": {
+            "collection": "summer-bags",
+            "title": "",
+            "link": ""
+          }
+        },
+        "ee594427-2471-4253-8b57-779d6b47b881": {
+          "type": "category",
+          "settings": {
+            "collection": "sneakers",
+            "title": "",
+            "link": ""
+          }
+        },
+        "dfb04870-4b39-4ce2-866a-bec29c2cb1cf": {
+          "type": "category",
+          "settings": {
+            "collection": "accessories",
+            "title": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "e9c73398-1609-4c44-8c49-73788b232285",
+        "02cbabe2-d70c-4247-b159-61f686ff2f21",
+        "d9db39a5-2045-4819-8127-2adb0fddd881",
+        "ee594427-2471-4253-8b57-779d6b47b881",
+        "dfb04870-4b39-4ce2-866a-bec29c2cb1cf"
+      ],
+      "settings": {
+        "title": "Shop by Categories"
+      }
     },
     "image_banner": {
       "type": "image-banner",
@@ -137,15 +177,15 @@
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
-        "description": "",
+        "description": "<p>Description Description Description Description Description Description Description <\/p>",
         "show_description": false,
-        "description_style": "body",
+        "description_style": "uppercase",
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
         "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
+        "show_view_all": true,
+        "view_all_style": "outline",
         "enable_desktop_slider": false,
         "color_scheme": "background-1",
         "image_ratio": "adapt",
@@ -197,6 +237,65 @@
         "color_scheme": "background-1",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "e82f0188-98ab-40f6-866c-aff1ee6e4ea9": {
+      "type": "product-grid",
+      "blocks": {
+        "188eff5f-9212-4e83-b90f-1974c264721c": {
+          "type": "item",
+          "settings": {
+            "product": "adjustable-multi-pocket-twill-cargo-pants",
+            "title": "",
+            "url": ""
+          }
+        },
+        "c1caf893-71c2-4778-a260-9bff803cb4ec": {
+          "type": "item",
+          "settings": {
+            "product": "alace-outdoor-garden-chairs",
+            "image": "shopify:\/\/shop_images\/banner-single-sample.jpg",
+            "title": "Title override",
+            "url": "shopify:\/\/collections"
+          }
+        },
+        "e5ef2caa-a784-4893-965b-ce233587504e": {
+          "type": "item",
+          "settings": {
+            "product": "arc-automatic-watches",
+            "title": "",
+            "url": ""
+          }
+        },
+        "d99ed1a4-8d4c-4d3a-a73c-819cd4e8d96c": {
+          "type": "item",
+          "settings": {
+            "product": "bronze-ore-watch",
+            "title": "",
+            "url": ""
+          }
+        },
+        "48b77aff-c0af-4454-977a-e22581a7a569": {
+          "type": "item",
+          "settings": {
+            "product": "copy-of-flight-pack-2-x-pac",
+            "title": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "188eff5f-9212-4e83-b90f-1974c264721c",
+        "c1caf893-71c2-4778-a260-9bff803cb4ec",
+        "e5ef2caa-a784-4893-965b-ce233587504e",
+        "d99ed1a4-8d4c-4d3a-a73c-819cd4e8d96c",
+        "48b77aff-c0af-4454-977a-e22581a7a569"
+      ],
+      "settings": {
+        "title": "Section Title",
+        "text": "<p>Lorem ipsum<\/p>",
+        "collection": "",
+        "collection_range": 4
       }
     },
     "video": {
@@ -266,20 +365,17 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "570571ce-0f95-4ce3-82f3-34434684f474": {
-      "type": "shop-categories",
-      "settings": {}
     }
   },
   "order": [
-    "c6f70922-8f19-4d22-8d0b-e1142e699f58",
+    "f4e07c52-b779-4bf0-94e7-5e39e8c5c6aa",
+    "570571ce-0f95-4ce3-82f3-34434684f474",
     "image_banner",
     "rich_text",
     "featured_collection",
     "collage",
+    "e82f0188-98ab-40f6-866c-aff1ee6e4ea9",
     "video",
-    "multicolumn",
-    "570571ce-0f95-4ce3-82f3-34434684f474"
+    "multicolumn"
   ]
 }

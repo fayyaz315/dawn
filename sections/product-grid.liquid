@@ -1,0 +1,398 @@
+<div class="product-wrapper">
+  <div class="container">
+    <div class="site-heading">
+      <h2>{{ section.settings.title }}</h2>
+      <div class="description">
+        {{ section.settings.text }}
+      </div>
+    </div>
+    <div class="product-grid-wrapper">
+      {% if section.settings.collection != blank %}
+        {% for product in collections[section.settings.collection].products limit: section.settings.collection_range %}
+          {% assign image = product.featured_image | product_img_url: '1000x' %}
+          {% assign title = product.title %} 
+          {% assign url = product.url %}
+          <div class="product-items">
+            <a href="{{ url }}">
+              <div class="product-images">
+                <img src="{{ image }}" alt="{{ product.title }}">
+                <img src="{{ product.media[1] |  img_url: '1000x' }}" alt="{{ product.title }}">
+                <div class="tags-sale">
+                  <span>Sale</span>
+                </div>
+              </div>
+              <div class="product-meta-data">
+                <h4>{{ title }}</h4>
+                <span>{{ product.price | money }}</span>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+        {% else %}
+        {% for block in section.blocks limit: section.settings.collection_range %}
+          {% assign product = block.settings.product %}
+          {% if block.settings.image != blank %}
+                  {% assign image = block.settings.image | img_url: '1000x' %}
+              {% else %}
+                  {% assign image = product.featured_image | product_img_url: '1000x' %}
+          {% endif %}
+  
+          {% if block.settings.title != blank %}
+                  {% assign title = block.settings.title %}
+              {% else %}
+                  {% assign title = product.title %}
+          {% endif %}
+  
+          {% if block.settings.url != blank %}
+                  {% assign url = block.settings.url %}
+              {% else %}
+                  {% assign url = product.url %}
+          {% endif %}
+          <div class="product-items">
+            <a href="{{ url }}">
+              <div class="product-images">
+                <img src="{{ image }}" alt="{{ product.title }}">
+                <img src="{{ product.media[1] |  img_url: '1000x' }}" alt="{{ product.title }}">
+                <div class="tags-sale">
+                  <span>Sale</span>
+                </div>
+              </div>
+              <div class="product-meta-data">
+                <h4>{{ title }}</h4>
+                <span>{{ product.price | money }}</span>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+
+{% comment %} 
+  HTML  Code
+  <div class="product-wrapper">
+    <div class="container">
+      <div class="site-heading">
+        <h2>{{ section.settings.title }}</h2>
+        <div class="description">
+          {{ section.settings.text }}
+        </div>
+      </div>
+      <div class="product-grid-wrapper">
+        <div class="product-items">
+          <a href="#">
+            <div class="product-images">
+              <img src="https://keyf-2.myshopify.com/cdn/shop/products/25_c19fa70d-52dc-4b7f-9eb8-153622cb5f41.jpg?v=1697592534&width=360" alt="img">
+              <img src="https://keyf-2.myshopify.com/cdn/shop/products/24_a20e137c-1e00-4403-a042-f94f85ba6d5a.jpg?v=1697592533&width=360" alt="img">
+              <div class="tags-sale">
+                <span>Sale</span>
+              </div>
+            </div>
+            <div class="product-meta-data">
+              <h4>Adjustable multi-pocket twill cargo pants</h4>
+              <span>$49.00 USD</span>
+            </div>
+          </a>
+        </div>
+        <div class="product-items">
+          <a href="#">
+            <div class="product-images">
+              <img src="https://keyf-2.myshopify.com/cdn/shop/products/25_c19fa70d-52dc-4b7f-9eb8-153622cb5f41.jpg?v=1697592534&width=360" alt="img">
+              <img src="https://keyf-2.myshopify.com/cdn/shop/products/24_a20e137c-1e00-4403-a042-f94f85ba6d5a.jpg?v=1697592533&width=360" alt="img">
+              <div class="tags-sale">
+                <span>Sale</span>
+              </div>
+            </div>
+            <div class="product-meta-data">
+              <h4>Adjustable multi-pocket twill cargo pants</h4>
+              <span>$49.00 USD</span>
+            </div>
+          </a>
+        </div>
+        <div class="product-items">
+          <a href="#">
+            <div class="product-images">
+              <img src="https://keyf-2.myshopify.com/cdn/shop/products/25_c19fa70d-52dc-4b7f-9eb8-153622cb5f41.jpg?v=1697592534&width=360" alt="img">
+              <img src="https://keyf-2.myshopify.com/cdn/shop/products/24_a20e137c-1e00-4403-a042-f94f85ba6d5a.jpg?v=1697592533&width=360" alt="img">
+              <div class="tags-sale">
+                <span>Sale</span>
+              </div>
+            </div>
+            <div class="product-meta-data">
+              <h4>Adjustable multi-pocket twill cargo pants</h4>
+              <span>$49.00 USD</span>
+            </div>
+          </a>
+        </div>
+        <div class="product-items">
+          <a href="#">
+            <div class="product-images">
+              <img src="https://keyf-2.myshopify.com/cdn/shop/products/25_c19fa70d-52dc-4b7f-9eb8-153622cb5f41.jpg?v=1697592534&width=360" alt="img">
+              <img src="https://keyf-2.myshopify.com/cdn/shop/products/24_a20e137c-1e00-4403-a042-f94f85ba6d5a.jpg?v=1697592533&width=360" alt="img">
+              <div class="tags-sale">
+                <span>Sale</span>
+              </div>
+            </div>
+            <div class="product-meta-data">
+              <h4>Adjustable multi-pocket twill cargo pants</h4>
+              <span>$49.00 USD</span>
+            </div>
+          </a>
+        </div>
+        <div class="product-items">
+          <a href="#">
+            <div class="product-images">
+              <img src="https://keyf-2.myshopify.com/cdn/shop/products/25_c19fa70d-52dc-4b7f-9eb8-153622cb5f41.jpg?v=1697592534&width=360" alt="img">
+              <img src="https://keyf-2.myshopify.com/cdn/shop/products/24_a20e137c-1e00-4403-a042-f94f85ba6d5a.jpg?v=1697592533&width=360" alt="img">
+              <div class="tags-sale">
+                <span>Sale</span>
+              </div>
+            </div>
+            <div class="product-meta-data">
+              <h4>Adjustable multi-pocket twill cargo pants</h4>
+              <span>$49.00 USD</span>
+            </div>
+          </a>
+        </div>
+        <div class="product-items">
+          <a href="#">
+            <div class="product-images">
+              <img src="https://keyf-2.myshopify.com/cdn/shop/products/25_c19fa70d-52dc-4b7f-9eb8-153622cb5f41.jpg?v=1697592534&width=360" alt="img">
+              <img src="https://keyf-2.myshopify.com/cdn/shop/products/24_a20e137c-1e00-4403-a042-f94f85ba6d5a.jpg?v=1697592533&width=360" alt="img">
+              <div class="tags-sale">
+                <span>Sale</span>
+              </div>
+            </div>
+            <div class="product-meta-data">
+              <h4>Adjustable multi-pocket twill cargo pants</h4>
+              <span>$49.00 USD</span>
+            </div>
+          </a>
+        </div>
+        <div class="product-items">
+          <a href="#">
+            <div class="product-images">
+              <img src="https://keyf-2.myshopify.com/cdn/shop/products/25_c19fa70d-52dc-4b7f-9eb8-153622cb5f41.jpg?v=1697592534&width=360" alt="img">
+              <img src="https://keyf-2.myshopify.com/cdn/shop/products/24_a20e137c-1e00-4403-a042-f94f85ba6d5a.jpg?v=1697592533&width=360" alt="img">
+              <div class="tags-sale">
+                <span>Sale</span>
+              </div>
+            </div>
+            <div class="product-meta-data">
+              <h4>Adjustable multi-pocket twill cargo pants</h4>
+              <span>$49.00 USD</span>
+            </div>
+          </a>
+        </div>
+        <div class="product-items">
+          <a href="#">
+            <div class="product-images">
+              <img src="https://keyf-2.myshopify.com/cdn/shop/products/25_c19fa70d-52dc-4b7f-9eb8-153622cb5f41.jpg?v=1697592534&width=360" alt="img">
+              <img src="https://keyf-2.myshopify.com/cdn/shop/products/24_a20e137c-1e00-4403-a042-f94f85ba6d5a.jpg?v=1697592533&width=360" alt="img">
+              <div class="tags-sale">
+                <span>Sale</span>
+              </div>
+            </div>
+            <div class="product-meta-data">
+              <h4>Adjustable multi-pocket twill cargo pants</h4>
+              <span>$49.00 USD</span>
+            </div>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+ {% endcomment %}
+
+
+<style>
+  .product-wrapper {
+    padding: 50px 0;
+  }
+
+  .container {
+      max-width: 1130px;
+      margin: 0 auto;
+      padding: 0 5px;
+  }
+
+  .site-heading h2 {
+      font-size: 32px;
+      font-weight: 500;
+      margin: 0;
+  }
+
+  .site-heading p {
+      margin: 5px 0 0 0;
+      font-size: 16px;
+  }
+
+  .product-grid-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .product-items {
+      display: block;
+      text-decoration: none;
+      margin-top: 30px;
+      width: 25%;
+      padding: 0 10px;
+      transition: all 0.4s;
+  }
+  .product-items:hover .product-meta-data{opacity: 0.7;}
+  .product-images {
+      position: relative;
+      line-height: 0;
+      height: 360px;
+      overflow: hidden;
+  }
+
+  .product-images img {
+      width: 100%;
+      display: inline-block;
+      height: 360px;
+      object-fit: cover;
+      transition: all 0.6s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+  }
+  .product-images img:nth-child(1){
+      z-index: 2;
+      opacity: 1;
+  }
+  .product-images img:nth-child(2){
+      z-index: 1;
+      opacity: 0;
+  }
+
+  .product-items:hover .product-images img:nth-child(1){
+      z-index: 1;
+      opacity: 0;
+  }
+  .product-items:hover .product-images img:nth-child(2){
+      z-index: 2;
+      opacity: 1;
+  }
+  .product-items:hover .product-images img{
+      transform: scale(1.05);
+  }
+  .product-meta-data {
+      padding: 10px 0 0 0;
+      transition: all 0.3s;
+  }
+
+  .product-meta-data h4 {
+      margin: 0 0 3px 0;
+      font-size: 12px;
+  }
+
+  .product-meta-data span {
+      display: inline-block;
+      font-size: 16px;
+      color: #666;
+  }
+
+  .product-images .tags-sale {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      z-index: 3;
+  }
+
+  .product-images .tags-sale span {
+      display: inline-block;
+      background: #334fb4;
+      color: #fff;
+      padding: 6px 15px;
+      line-height: 1.2;
+      border-radius: 21px;
+      font-size: 14px;
+  }
+
+  @media(max-width: 991.98px){
+    .product-items {
+        width: 50%;
+    }
+  }
+  @media(max-width: 767.98px){
+    .product-items {
+        width: 100%;
+    }
+  }
+
+</style>
+
+
+{% schema %}
+  {
+    "name": "Products grid",
+    "class": "margin-top-bottom-section",
+    "settings": [
+      {
+        "label": "Title",
+        "id": "title",
+        "type": "text",
+        "default": "Featured products"
+      },
+      {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+      },
+      {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+      },
+      {
+        "type": "range",
+        "id": "collection_range",
+        "label": "Number of product",
+        "min": 4,
+        "max": 16,
+        "step": 1,
+        "default": 4
+    }
+    ],
+    "blocks":[
+        {
+            "type":"item",
+            "name":"Add item",
+            "settings":[
+                {
+                    "type": "product",
+                    "id": "product",
+                    "label": "Choose product"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "url",
+                    "id": "url",
+                    "label": "Link"
+                }
+            ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "Products grid"
+      }
+    ]
+  }
+{% endschema %}
